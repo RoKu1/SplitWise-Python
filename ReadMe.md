@@ -1,5 +1,5 @@
-**SPLITWISE CLONE**
-**How To Start**
+# SPLITWISE CLONE
+## How To Start
     **Prequisites**
         docker desktop (on windows)(docker engine on centos)
         build the image with "docker build -t assign"
@@ -7,7 +7,7 @@
         run the image on linux with "docker run -d -p 5000:5000 --name=assign -v $(pwd):/app assign"
         
 
-**Features Provided**
+## Features Provided
         a> be able to add users. (create)
         c> user is able to add expense(either in group or individuallu).
             i>  types of expenses: EQUAL, EXACT, SHARES
@@ -25,7 +25,7 @@
         ** can be done -- payment capability
 
 
-**Database Schemas**
+## Database Schemas
     **USER TABLE**
         id = db.Column(db.Integer, primary_key=True, autoincrement=True)
         firstname = db.Column(db.String(100), nullable=False)
@@ -39,7 +39,7 @@
 
 
 
-**ENDPOINTS[In Postman Collection] DESCRIPTION**
+## ENDPOINTS[In Postman Collection] DESCRIPTION
     /users :-->
             get: /api/v1/user [get existing user]
                 body : json of userid to get {id-->id} {body example in postman}
@@ -82,30 +82,27 @@
                         "towhom" : "u1@gmail.com"
                     }
 
-**ALready Present Users**
-{
-    "email": "u1@gmail.com", 
-    "fname": "u1fn",
-    "lname":"u1ln"
-}
-{
-    "email": "u2@gmail.com", 
-    "fname": "u2fn",
-    "lname":"u2ln"
-}
-{
-    "email": "u3@gmail.com", 
-    "fname": "u3fn",
-    "lname":"u3ln"
-}
-{
-    "email": "u4@gmail.com", 
-    "fname": "u4fn",
-    "lname":"u4ln"
-}
+### ALready Present Users
+   ```
+      {
+         "email": "u1@gmail.com", 
+         "fname": "u1fn",
+         "lname":"u1ln"}
+      {
+        "email": "u2@gmail.com", 
+        "fname": "u2fn",
+        "lname":"u2ln"}
+      {
+        "email": "u3@gmail.com", 
+        "fname": "u3fn",
+        "lname":"u3ln"}
+      {
+        "email": "u4@gmail.com", 
+        "fname": "u4fn",
+        "lname":"u4ln"} ```
 
 
-**Already Present Expense**
+### Already Present Expense**
     ***None**
 
 
