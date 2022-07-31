@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "23ed6f23-b123-4fa4-96cd-0fdb6a3e8973",
+		"name": "SPLITWISE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"u5@gmail.com\", \r\n    \"fname\": \"u5fn\",\r\n    \"lname\":\"u5ln\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update userdata",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"u5@gmail.com\", \r\n    \"fname\": \"u5fnchanged\",\r\n    \"lname\":\"u5ln\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\" : \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "expense",
+			"item": [
+				{
+					"name": "expense_Equal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"whopaid\" : [\"u1@gmail.com\", \"u2@gmail.com\"],\r\n    \"howmuch\" : [\"400\", \"400\"],\r\n    \"whoowes\" : [\"u1@gmail.com\", \"u2@gmail.com\", \"u3@gmail.com\", \"u4@gmail.com\"],\r\n    \"type\" : \"EQUAL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/expense",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"expense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "expense_Exact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"whopaid\" : \"u1@gmail.com\",\r\n    \"howmuch\" : \"1200\",\r\n    \"whoowes\" : [\"u1@gmail.com\", \"u2@gmail.com\", \"u3@gmail.com\", \"u4@gmail.com\"],\r\n    \"type\" : \"EXACT\",\r\n    \"amounts\" : [\"0\", \"400\", \"400\", \"400\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/expense",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"expense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "expense_Shares",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"whopaid\" : \"u1@gmail.com\",\r\n    \"howmuch\" : \"800\",\r\n    \"whoowes\" : [\"u1@gmail.com\", \"u2@gmail.com\", \"u3@gmail.com\", \"u4@gmail.com\"],\r\n    \"type\" : \"SHARES\",\r\n    \"shares\" : [\"1\", \"2\", \"2\", \"2\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/expense",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"expense"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "settle",
+			"item": [
+				{
+					"name": "settle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"whopaid\" : \"u2@gmail.com\",\r\n    \"howmuch\" : \"300\", \r\n    \"towhom\" : \"u1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/settle",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"settle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "poll",
+			"item": [
+				{
+					"name": "poll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\" : \"u1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/poll",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"poll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

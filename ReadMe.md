@@ -82,7 +82,7 @@
                         "towhom" : "u1@gmail.com"
                     }
 
-### ALready Present Users
+### Already Present Users
    ```
       {
          "email": "u1@gmail.com", 
